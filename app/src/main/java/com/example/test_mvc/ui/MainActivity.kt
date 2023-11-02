@@ -2,19 +2,16 @@ package com.example.test_mvc.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.example.test_mvc.databinding.ActivityMainBinding
-import com.example.test_mvc.ui.data.FakeApiService
-import com.example.test_mvc.ui.data.FakeDatabase
 import com.example.test_mvc.ui.data.model.User
 import com.example.test_mvc.ui.data.model.Wisdom
 import com.example.test_mvc.ui.presenter.IMainView
-import com.example.test_mvc.ui.presenter.mainPresenter
+import com.example.test_mvc.ui.presenter.MainPresenter
 
 class MainActivity : AppCompatActivity(), IMainView {
 
     private lateinit var binding: ActivityMainBinding
-    private val presenter = mainPresenter()
+    private val presenter = MainPresenter()
 
     // private val api = FakeApiService() // MVC
     // private val database = FakeDatabase() /MVC
