@@ -45,16 +45,16 @@ class MainActivity : AppCompatActivity()/*, IMainView */ /* Mvp*/ {
             viewModel.getAWisdom()
         }
 
-            viewModel.currentUser.observe(this) {
-                binding.TextUserName.text = it.username
-            }
+        viewModel.currentUser.observe(this) {
+            binding.TextUserName.text = it.username
+        }
 
-            viewModel.wisdom.observe(this) {
-                binding.apply {
-                    textDate.text = it.publishData
-                    textContent.text = it.content
-                }
+        viewModel.wisdom.observe(this) {
+            binding.apply {
+                textDate.text = it.publishData
+                textContent.text = it.content
             }
+        }
 
 
     }
